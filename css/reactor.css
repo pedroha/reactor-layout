@@ -1,8 +1,3 @@
-html, body, div {
-	margin: 0;
-	padding: 0;
-}
-
 body {
 	font-family: Helvetica;
 	background-color: #eee;
@@ -14,8 +9,7 @@ section {
 
 article {
 	font-family: Georgia, serif;
-	padding: 1em;
-	border-top: 2px solid #777;
+/*	border-top: 2px solid #777; */
 }
 
 button {
@@ -34,12 +28,16 @@ input[type="submit"] {
 }
 
 .article-image {
-	width: 90%;
+	width: 100%;
 }
 
 @media (min-width: 600px) {
 	.article-image {
 		width: 400px;
+	}
+
+	article h3 {
+		width: 300px;
 	}
 }
 
@@ -47,6 +45,10 @@ input[type="submit"] {
 	display: none;			
 }
 
+article header h3 {
+	padding: 1em;
+	line-height: 1.5em;
+}
 
 /*
  * Post Article
@@ -69,11 +71,62 @@ textarea {
 	height: 5em;
 }
 
-.post-article > div {
-	border-top: 2px solid #aaa;
+section > div {
+/*	border-top: 2px solid #aaa; */
 	padding: 1em;
 }
 
 /*
- *
+ * Article
  */
+
+
+article header {
+	position: relative;
+}
+
+article header h3 {	
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	color: white;
+
+	background-color: rgba(0,0,0, 0.4);
+}
+
+article header div {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+article header h3 {
+	z-index: 10;
+}
+
+
+/*
+ * 
+ */
+
+article {
+	position: relative;
+}
+
+section.comments article > * {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+button.flag {
+	width: 30px;
+	height: 30px;
+	background-image: url(../img/flag.png);
+	background-position: 0 0;
+	background-size: 28px 28px;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+}
