@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NSQ</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+
+		button {
+			background-color: #bada55;
+			width: 70px;
+			height: 40px;
+			border-radius: 10px;
+			padding: 10px;
+		}
+
+		.article-image {
+			width: 100%;
+		}
+
+		@media (min-width: 600px) {
+			.article-image {
+				width: 400px;
+			}
+		}
+
+		.hidden {
+			display: none;			
+		}
+
+	</style>
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+			$('section.articles .content').addClass('hidden');
+
+			$('section.articles article header').on('click', function() {
+				$(this).parent().find('.content').toggle(250);
+			});
+		});
+
+	</script>
+			
+</head>
+<body>
+
+	<div class="container">
+
+		<section class="registration">
+			<h3>Registration</h3>
+
+			Enter Zip:
+
+		</section>
+
+
+		<section class="preferences">
+			<h3>My Neighborhoods</h3>
+
+			Lots of neighborhood checkboxes
+
+		</section>
+
+		<section>
+			<select>
+				<option>Albany Park</option>
+				<option>Andersonville</option>
+				<option>Avondale</option>
+				<option>Lakeview</option>
+				<option>Lincoln Park</option>
+				<option>Lincoln Square</option>
+				<option>Little Italy & University Village</option>
+				<option>Little Village</option>
+				<option>Logan Square</option>
+				<option>Loop</option>
+				<option>West Loop</option>
+				<option>West Ridge</option>
+				<option>West Town</option>
+				<option>Wicker Park / Bucktown</option>
+				<option>Wrigleyville</option>
+			</select>
+		</section>
+
+		<section class="articles">
+			<article>
+				<header>
+					<h3>Copying CDs is now legal - but is it too little, too late? (Wired UK)</h3>
+					<img src="https://dna-live.s3.amazonaws.com/img/thumbs/2a0efd35f1b4e2707db1f9a07bfa970a_300x250" class="article-image" />
+				</header>
+
+				<div class="content">
+					<p class="description">Copying Tapes were once the devil, to the music industryDavidTB / Shutterstock Today, copyright law in the UK catches up with what people have been doing for decades -- backing up media for personal… ...</p>
+					<div class="contributor">Me</div>
+					<datetime>2014-10-01 20:06:09</datetime>	
+					<div>
+						<img src="http://iconion.com/images/icon_sets/data2/images/social_media_icons.jpg" width="250">
+					</div>
+					<div>
+						<button>Upvote</button>
+						<button class="comment">Comment</button>
+						<button>Flag</button>						
+						<button>Hide</button>						
+					</div>
+				</div>
+	
+			</article>
+			<article>
+				<header>
+					<h3>The History of Classic American Tattoos</h3>
+					<img src="http://images.complex.com/complex/image/upload/t_article_image/r4yzwmxcs7vfiwyhguov.jpg" class="article-image">
+				</header>
+
+				<div class="content">
+					<p class="description">Upon entering the circus circuit in the 1870s, heavily tattooed performer Captain Costentenus brought an elaborate backstory: adorned with 388 tigers, elephants, and other exotic creatures ...</p>
+
+					<div class="contributor">Me</div>
+					<datetime>2014-09-30</datetime>	
+					<div>
+						<img src="http://iconion.com/images/icon_sets/data2/images/social_media_icons.jpg" width="250">
+					</div>
+					<div>
+						<button>Upvote</button>
+						<button class="comment">Comment</button>
+						<button>Flag</button>
+						<button>Hide</button>						
+					</div>					
+				</div>
+					
+			</article>
+
+			<article>
+
+				<header>
+					<h3>Watch Diggin In The Carts</h3>
+					<img src="http://image3.redbull.com/rbcom/010/2014-09-04/1331676463645_3/0010/1/350/233/3/red-bull-music-academy-s-new-documentary-series-diggin-in-the-carts.jpg" class="article-image">
+				</header>
+
+				<div class="content">
+					<p class="description">Gamers who spent their formative years discovering the joys of 8-bit console classics could no doubt recall every bleep, bloop and dispiriting 'Game Over' noise, but they most likely have no idea who created the soundtrack to their childhood ...</p>
+
+					<div class="contributor">Me</div>
+					<datetime>2014-09-30</datetime>	
+					<div>
+						<img src="http://iconion.com/images/icon_sets/data2/images/social_media_icons.jpg" width="250">
+					</div>
+					<div>
+						<button>Upvote</button>
+						<button class="comment">Comment</button>
+						<button>Flag</button>										
+						<button>Hide</button>					
+					</div>					
+				</div>
+			</article>
+		</section>
+
+		<section>
+			<form class="post-article">
+				<label>Title</label>
+				<input type="text"></input>
+
+				<label>Content</label>
+				<textarea class></textarea>
+
+				<input type="submit" value="Post Article"></submit>
+			</form>
+		</section>
+
+		<!-- COMMENTS -->
+
+		<section class="comments">
+			<article>
+				<img src="http://png-4.findicons.com/files/icons/1072/face_avatars/300/i03.png" width="50">
+				<p>I agree</p>
+				<datetime>2014-12-12</datetime>
+				<button>Flag</button>				
+			</article>
+			<article>
+				<img src="http://northbeachneighbors.org/wp-content/uploads/2013/10/Female-Face-FH-5-slim-icon1.png" width="50">
+				<p>I disagree</p>				
+				<datetime>2014-12-12</datetime>
+				<button>Flag</button>				
+			</article>
+			<article>
+				<img src="http://www.veryicon.com/icon/png/Avatar/Face%20Avatars/Male%20Face%20G1.png" width="50">
+				<p>I don't know</p>				
+				<datetime>2014-12-12</datetime>
+				<button>Flag</button>				
+			</article>
+
+			<form class="post-comment">
+				<textarea class=""></textarea>
+				<input type="submit" value="Add to conversation"></input>
+			</form>
+
+		</section>
+
+	</div>
+
+</body>
+</html>
