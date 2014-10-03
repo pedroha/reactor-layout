@@ -4,46 +4,7 @@
 	<title>NSQ</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<style type="text/css">
-
-		button {
-			background-color: #bada55;
-			width: 70px;
-			height: 40px;
-			border-radius: 10px;
-			padding: 10px;
-		}
-
-		.article-image {
-			width: 100%;
-		}
-
-		@media (min-width: 600px) {
-			.article-image {
-				width: 400px;
-			}
-		}
-
-		.hidden {
-			display: none;			
-		}
-
-	</style>
-
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-
-	<script type="text/javascript">
-
-		$(document).ready(function() {
-			$('section.articles .content').addClass('hidden');
-
-			$('section.articles article header').on('click', function() {
-				$(this).parent().find('.content').toggle(250);
-			});
-		});
-
-	</script>
-			
+	<link rel="stylesheet" type="text/css" href="css/reactor.css">
 </head>
 <body>
 
@@ -156,21 +117,28 @@
 			</article>
 		</section>
 
-		<section>
-			<form class="post-article">
-				<label>Title</label>
-				<input type="text"></input>
+		<section class="post-article">
+			<div>
+				<h2>Post Article</h2>
+				<form>
+					<label>Title</label>
+					<input type="text"></input>
 
-				<label>Content</label>
-				<textarea class></textarea>
+					<label>Content</label>
+					<textarea class></textarea>
 
-				<input type="submit" value="Post Article"></submit>
-			</form>
+					<input type="submit" value="Post Article"></submit>
+				</form>				
+			</div>
 		</section>
 
 		<!-- COMMENTS -->
+		<style type="text/css">
+		</style>
+
 
 		<section class="comments">
+			<h2>Comments</h2>
 			<article>
 				<img src="http://png-4.findicons.com/files/icons/1072/face_avatars/300/i03.png" width="50">
 				<p>I agree</p>
@@ -199,5 +167,21 @@
 
 	</div>
 
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+	<script type="text/javascript">
+
+		var setup = function() {
+			$('section.articles .content').addClass('hidden');
+
+			$('section.articles article header').on('click', function() {
+				$(this).parent().find('.content').toggle(250);
+			});			
+		};
+
+		setup();
+
+	</script>
+			
 </body>
 </html>
