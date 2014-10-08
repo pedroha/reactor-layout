@@ -320,26 +320,28 @@
 
 	<script type="text/javascript">
 
-		var showNewsFeed = function() {
+		var showNewsFeed = function(callback) {
 			$('.select-place').fadeOut();
-			$('.newsfeed').fadeIn();
+			$('.newsfeed').fadeIn(callback);
 		};
 
-		var showSelectPlace = function() {
-			$('.select-place').fadeIn();
+		var showSelectPlace = function(callback) {
+			$('.select-place').fadeIn(callback);
 			$('.newsfeed').fadeOut();
 		};
 
 		$('#show-newsfeed').on('click', function() {
-			showNewsFeed();
-			$('body').scrollTop(0);
+			showNewsFeed(function() {
+				$('body').scrollTop(0);
+			});
 		});
 
 		$('.show-place-selector').on('click', function() {
-			showSelectPlace();
-			$('body').scrollTop(0);
+			showSelectPlace(function() {
+				$('body').scrollTop(0);
+			});
 		});
-
+		
 	</script>
 </body>
 </html>
